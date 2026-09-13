@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CALL TIME — you said yes. the file is next.</title>
+  <meta name="description" content="CALL TIME writes one HTML file you own for people starting a business who do not know how, then bills other live sites on a night call sheet so they stop sitting quiet." />
+  <meta name="theme-color" content="#05070B" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: "#05070B",
+            metal: "#0B1018",
+            rail: "#161C26",
+            mist: "#8B93A7",
+            paper: "#E8EEF8",
+            live: "#4D8BFF",
+            heat: "#FF2B3A"
+          },
+          fontFamily: {
+            display: ["Bebas Neue", "Impact", "sans-serif"],
+            sans: ["Sora", "system-ui", "sans-serif"],
+            mono: ["IBM Plex Mono", "ui-monospace", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(900px 480px at 12% -8%, rgba(77,139,255,0.16), transparent 58%),
+        radial-gradient(720px 380px at 108% 88%, rgba(255,43,58,0.12), transparent 52%),
+        #05070B;
+    }
+    .scan {
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 3px,
+        rgba(255,255,255,0.016) 3px,
+        rgba(255,255,255,0.016) 4px
+      );
+      pointer-events: none;
+    }
+    .reveal { opacity: 0; transform: translateY(12px); }
+    .live-dot {
+      box-shadow: 0 0 0 0 rgba(77,139,255,0.55);
+      animation: pulse 1.8s ease-out infinite;
+    }
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 8px rgba(77,139,255,0); }
+      100% { box-shadow: 0 0 0 0 rgba(77,139,255,0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .live-dot { animation: none; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body class="bg-void text-paper font-sans antialiased">
+  <div class="scan fixed inset-0 z-0"></div>
+  <a href="#sheet" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-live focus:px-3 focus:py-2 focus:text-void">Skip to call sheet</a>
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-void/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="#top" class="font-display text-2xl tracking-wide text-paper">CALL TIME</a>
+      <nav class="flex gap-5 font-mono text-[10px] uppercase tracking-[0.22em] text-mist">
+        <a href="#beats" class="hover:text-live">Beats</a>
+        <a href="#sheet" class="hover:text-live">Sheet</a>
+        <a href="#brief" class="text-heat hover:text-paper">Half hour</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top" class="relative z-10">
+    <section class="mx-auto grid max-w-6xl gap-10 px-4 pb-16 pt-12 md:grid-cols-12 md:pt-20">
+      <div class="md:col-span-8">
+        <p class="reveal font-mono text-[11px] uppercase tracking-[0.28em] text-live">Utah desk · client-owned file · ~0.5s</p>
+        <h1 class="reveal mt-4 font-display text-[16vw] leading-[0.86] tracking-wide text-paper sm:text-8xl md:text-9xl">YOU SAID YES.<br /><span class="text-heat">THE FILE IS NEXT.</span></h1>
+        <p class="reveal mt-6 max-w-xl text-base leading-relaxed text-mist sm:text-lg">Built for modern young adults and adults who just decided to start a business and do not know how. One HTML file you keep. Then a night call sheet that bills other live sites so they stop whispering.</p>
+        <div class="reveal mt-8 flex flex-wrap gap-3">
+          <a href="#brief" class="bg-heat px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-paper hover:bg-paper hover:text-void">File the brief</a>
+          <a href="#sheet" class="border border-live/40 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-live hover:border-live hover:bg-live/10">See who is live</a>
+        </div>
+      </div>
+      <aside class="reveal md:col-span-4">
+        <div class="border border-white/10 bg-metal p-5">
+          <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-mist">Tonight’s call</p>
+          <dl class="mt-4 space-y-3 font-mono text-[12px]">
+            <div class="flex justify-between gap-4 border-b border-white/5 pb-3"><dt class="text-mist">Half hour</dt><dd class="text-paper">decision</dd></div>
+            <div class="flex justify-between gap-4 border-b border-white/5 pb-3"><dt class="text-mist">Places</dt><dd class="text-live">owned HTML</dd></div>
+            <div class="flex justify-between gap-4 border-b border-white/5 pb-3"><dt class="text-mist">House</dt><dd class="text-heat">studio heat</dd></div>
+            <div class="flex justify-between gap-4"><dt class="text-mist">Quiet rooms</dt><dd class="text-mist">still in tray</dd></div>
+          </dl>
+          <p class="mt-5 text-sm leading-relaxed text-mist">Windows down. Lights off. The page should feel like the hour before doors — not a brochure.</p>
+        </div>
+      </aside>
+    </section>
+    <section id="beats" class="mx-auto max-w-6xl px-4 pb-16">
+      <p class="reveal font-mono text-[10px] uppercase tracking-[0.28em] text-mist">Two beats. No CMS.</p>
+      <div class="mt-6 grid gap-4 md:grid-cols-2">
+        <article class="reveal border border-white/10 bg-metal p-6">
+          <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-heat">Beat A · first business file</p>
+          <h2 class="mt-3 font-display text-4xl tracking-wide">The page you keep</h2>
+          <p class="mt-3 text-sm leading-relaxed text-mist">You describe the thing you just decided. We write one production HTML file. You own it. Drop it on Vercel. No theme store, no monthly builder, no one else holding the keys.</p>
+        </article>
+        <article class="reveal border border-white/10 bg-metal p-6">
+          <p class="font-mono text-[10px] uppercase tracking-[0.24em] text-live">Beat B · other rooms, billed</p>
+          <h2 class="mt-3 font-display text-4xl tracking-wide">The sheet that talks</h2>
+          <p class="mt-3 text-sm leading-relaxed text-mist">Live URLs stamp blue. Studio work stamps red. Copy still in the tray stays gray. One mast. Sites that are already up but quiet get a room that is not empty.</p>
+        </article>
+      </div>
+    </section>
+    <section id="sheet" class="mx-auto max-w-6xl px-4 pb-16">
+      <div class="reveal flex items-end justify-between gap-4">
+        <div>
+          <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-live">Call sheet</p>
+          <h2 class="mt-2 font-display text-5xl tracking-wide sm:text-6xl">Who is in the house</h2>
+        </div>
+        <p class="hidden max-w-xs text-right font-mono text-[10px] uppercase tracking-[0.18em] text-mist sm:block">Blue live · red heat · gray tray</p>
+      </div>
+      <ol class="mt-8 divide-y divide-white/10 border-y border-white/10">
+        <li class="reveal grid gap-2 py-5 sm:grid-cols-12 sm:items-baseline">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-live sm:col-span-2">01 · live</p>
+          <div class="sm:col-span-6"><p class="font-display text-3xl tracking-wide">Iris Onyx</p><p class="mt-1 text-sm text-mist">Utah · independent · the softest knife. Goth pop. Lights off.</p></div>
+          <p class="sm:col-span-4 sm:text-right"><a class="inline-flex items-center gap-2 font-mono text-[12px] text-live hover:underline" href="https://iris0nyx.com" target="_blank" rel="noreferrer"><span class="live-dot inline-block h-1.5 w-1.5 rounded-full bg-live"></span>iris0nyx.com</a></p>
+        </li>
+        <li class="reveal grid gap-2 py-5 sm:grid-cols-12 sm:items-baseline">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-live sm:col-span-2">02 · live</p>
+          <div class="sm:col-span-6"><p class="font-display text-3xl tracking-wide">DNC Computerz</p><p class="mt-1 text-sm text-mist">Lot / classifieds energy. Items on the table, not a catalog speech.</p></div>
+          <p class="sm:col-span-4 sm:text-right"><a class="inline-flex items-center gap-2 font-mono text-[12px] text-live hover:underline" href="https://dnc-computerz.vercel.app" target="_blank" rel="noreferrer"><span class="live-dot inline-block h-1.5 w-1.5 rounded-full bg-live"></span>dnc-computerz.vercel.app</a></p>
+        </li>
+        <li class="reveal grid gap-2 py-5 sm:grid-cols-12 sm:items-baseline">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-heat sm:col-span-2">03 · heat</p>
+          <div class="sm:col-span-6"><p class="font-display text-3xl tracking-wide">REDLINE</p><p class="mt-1 text-sm text-mist">The desk that writes the files. Currently riding sameweekhq.</p></div>
+          <p class="sm:col-span-4 sm:text-right"><a class="font-mono text-[12px] text-heat hover:underline" href="https://sameweekhq.vercel.app" target="_blank" rel="noreferrer">sameweekhq.vercel.app</a></p>
+        </li>
+        <li class="reveal grid gap-2 py-5 sm:grid-cols-12 sm:items-baseline">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-live sm:col-span-2">04 · live</p>
+          <div class="sm:col-span-6"><p class="font-display text-3xl tracking-wide">Daytape</p><p class="mt-1 text-sm text-mist">A tape that already runs. Keep it on the sheet so it does not go quiet.</p></div>
+          <p class="sm:col-span-4 sm:text-right"><a class="inline-flex items-center gap-2 font-mono text-[12px] text-live hover:underline" href="https://daytape.vercel.app" target="_blank" rel="noreferrer"><span class="live-dot inline-block h-1.5 w-1.5 rounded-full bg-live"></span>daytape.vercel.app</a></p>
+        </li>
+        <li class="reveal grid gap-2 py-5 sm:grid-cols-12 sm:items-baseline">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-mist sm:col-span-2">05 · tray</p>
+          <div class="sm:col-span-6"><p class="font-display text-3xl tracking-wide">Sameweek</p><p class="mt-1 text-sm text-mist">On GitHub. sameweek.vercel.app currently serves CAST — wants its own URL.</p></div>
+          <p class="sm:col-span-4 sm:text-right"><a class="font-mono text-[12px] text-mist hover:text-paper hover:underline" href="https://github.com/citruswill2-cmd" target="_blank" rel="noreferrer">github.com/citruswill2-cmd</a></p>
+        </li>
+        <li class="reveal grid gap-2 py-5 sm:grid-cols-12 sm:items-baseline">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-mist sm:col-span-2">06 · tray</p>
+          <div class="sm:col-span-6"><p class="font-display text-3xl tracking-wide">Laughline</p><p class="mt-1 text-sm text-mist">Comedy first-draft on GitHub. laughline.vercel.app is still 404.</p></div>
+          <p class="sm:col-span-4 sm:text-right"><a class="font-mono text-[12px] text-mist hover:text-paper hover:underline" href="https://github.com/citruswill2-cmd/laughline" target="_blank" rel="noreferrer">github.com/citruswill2-cmd/laughline</a></p>
+        </li>
+        <li class="reveal grid gap-2 py-5 sm:grid-cols-12 sm:items-baseline">
+          <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-heat sm:col-span-2">07 · open</p>
+          <div class="sm:col-span-6"><p class="font-display text-3xl tracking-wide">Your name</p><p class="mt-1 text-sm text-mist">Open slug. One paragraph. Call time starts when you send it.</p></div>
+          <p class="sm:col-span-4 sm:text-right"><a class="font-mono text-[12px] text-heat hover:underline" href="#brief">file a brief →</a></p>
+        </li>
+      </ol>
+    </section>
+    <section id="brief" class="mx-auto max-w-6xl px-4 pb-24">
+      <div class="reveal border border-heat/40 bg-metal p-6 sm:p-10">
+        <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-heat">Half hour · one field</p>
+        <h2 class="mt-3 font-display text-5xl tracking-wide sm:text-6xl">Tell the desk what you just decided</h2>
+        <p class="mt-3 max-w-2xl text-sm leading-relaxed text-mist">No account. Opens mail to citruswill2@gmail.com with the paragraph already in the body. That is the brief.</p>
+        <form id="slug-form" class="mt-8">
+          <label for="slug" class="font-mono text-[10px] uppercase tracking-[0.22em] text-mist">The paragraph</label>
+          <textarea id="slug" name="slug" rows="6" required placeholder="I just decided to start a business. It is called ______. It does ______. The people I want in the room are ______." class="mt-2 w-full resize-y border border-white/15 bg-void px-4 py-3 text-sm text-paper placeholder:text-mist/60 focus:border-live focus:outline-none"></textarea>
+          <button type="submit" class="mt-4 bg-heat px-6 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-paper hover:bg-paper hover:text-void">Open the mail</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="relative z-10 border-t border-white/10">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-6">
+      <p class="font-display text-2xl tracking-wide">CALL TIME</p>
+      <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-mist">Void · live #4D8BFF · heat #FF2B3A · the file stays with you</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js" defer></script>
+  <script>
+    document.getElementById("slug-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var text = document.getElementById("slug").value.trim();
+      var subject = encodeURIComponent("CALL TIME brief");
+      var body = encodeURIComponent(text || "I just decided to start a business.");
+      window.location.href = "mailto:citruswill2@gmail.com?subject=" + subject + "&body=" + body;
+    });
+    function runReveal() {
+      if (!window.anime) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll(".reveal").forEach(function (el) {
+          el.style.opacity = "1";
+          el.style.transform = "none";
+        });
+        return;
+      }
+      window.anime({
+        targets: ".reveal",
+        opacity: [0, 1],
+        translateY: [12, 0],
+        delay: window.anime.stagger(70),
+        duration: 400,
+        easing: "easeOutQuad"
+      });
+    }
+    if (document.readyState === "complete") runReveal();
+    else window.addEventListener("load", runReveal);
+  </script>
+</body>
+</html>
